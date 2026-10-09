@@ -1,8 +1,8 @@
 .box{
     width:400px;
     height:300px;    
-    float:left;
-    position: absolute;
+    /*float:left;
+    position: absolute;*/
 }
 .bringFront{
     z-index: 99;
@@ -21,4 +21,23 @@
 }
 .bckRed{
     background-color: red;
+}
+.mainContainer{
+    width:300px;
+    height:300px;
+    background-color: blue;
+   position: absolute;
+
+}
+.innerBox{
+    width:50px;
+    height:50px;
+    background-color:#080;
+    position:absolute;
+    /*position: fixed;*/
+    top:0;
+    right:0;
+    border-radius: 50px;
+    margin-bottom: 50px;
+    margin-right: 50px;
 }
