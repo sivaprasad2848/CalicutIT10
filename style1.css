@@ -1,0 +1,24 @@
+.box{
+    width:400px;
+    height:300px;    
+    float:left;
+    position: absolute;
+}
+.bringFront{
+    z-index: 99;
+}
+.bringBack{
+    z-index: 10;
+}
+.mrg1{
+    margin-left: 10px;
+}
+.mrg2{
+    margin-left: 150px;
+}
+.bckBlack{
+    background-color: black;
+}
+.bckRed{
+    background-color: red;
+}

@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-error": "#690005", "inverse-surface": "#e2e2e8", "surface-tint": "#ffb4ab", "on-surface": "#e2e2e8", "on-tertiary-fixed": "#171c20", "surface-container-lowest": "#0c0e12", "secondary": "#8aceff", "primary-fixed": "#ffdad6", "background": "#111317", "secondary-container": "#019fe3", "tertiary": "#c3c7cd", "on-background": "#e2e2e8", "on-primary-container": "#fffafa", "hydro-electric": "#38BDF8", "primary-container": "#e31e24", "on-secondary": "#00344e", "tertiary-fixed-dim": "#c3c7cd", "outline-variant": "#5d3f3c", "on-primary-fixed": "#410002", "chrome-silver": "#E5E7EB", "surface-container": "#1e2024", "on-surface-variant": "#e7bdb8", "error-container": "#93000a", "tertiary-fixed": "#dfe3e9", "error": "#ffb4ab", "outline": "#ae8883", "surface": "#111317", "on-tertiary-container": "#fafbff", "on-tertiary-fixed-variant": "#43474c", "secondary-fixed-dim": "#8aceff", "on-secondary-fixed-variant": "#004b6f", "on-primary": "#690006", "tertiary-container": "#70747a", "paint-gloss-white": "#FFFFFF", "surface-elevated": "#1F242D", "surface-bright": "#37393e", "surface-border": "#2E3543", "primary": "#ffb4ab", "on-secondary-container": "#00324b", "surface-container-high": "#282a2e", "surface-container-low": "#1a1c20", "on-secondary-fixed": "#001e2f", "secondary-fixed": "#c9e6ff", "primary-fixed-dim": "#ffb4ab", "surface-dim": "#111317", "on-tertiary": "#2c3136", "surface-variant": "#333539", "inverse-on-surface": "#2f3035", "inverse-primary": "#c00014", "on-error-container": "#ffdad6", "carbon-shield": "#16191F", "surface-container-highest": "#333539", "speed-red-bright": "#FF333A", "on-primary-fixed-variant": "#93000d" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin": "2rem", "gutter": "1.5rem", "space-xs": "0.25rem", "space-sm": "0.5rem", "space-xl": "2.5rem", "margin-mobile": "1rem", "space-lg": "1.5rem", "gutter-mobile": "1rem", "space-md": "1rem" }, "fontFamily": { "display-mobile": [ "Barlow Condensed" ], "headline-lg-mobile": [ "Barlow Condensed" ], "label-md": [ "Barlow Condensed" ], "body-md": [ "Plus Jakarta Sans" ], "headline-lg": [ "Barlow Condensed" ], "display": [ "Barlow Condensed" ], "headline-md": [ "Barlow Condensed" ], "label-sm": [ "Barlow Condensed" ], "title-lg": [ "Plus Jakarta Sans" ], "label-lg": [ "Barlow Condensed" ], "body-lg": [ "Plus Jakarta Sans" ], "title-md": [ "Plus Jakarta Sans" ], "body-sm": [ "Plus Jakarta Sans" ], "headline-sm": [ "Barlow Condensed" ] }, "fontSize": { "display-mobile": [ "38px", { "lineHeight": "42px", "letterSpacing": "0.02em", "fontWeight": "800" } ], "headline-lg-mobile": [ "28px", { "lineHeight": "32px", "letterSpacing": "0.01em", "fontWeight": "700" } ], "label-md": [ "13px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "22px", "fontWeight": "400" } ], "headline-lg": [ "40px", { "lineHeight": "44px", "letterSpacing": "0.01em", "fontWeight": "700" } ], "display": [ "56px", { "lineHeight": "60px", "letterSpacing": "0.02em", "fontWeight": "800" } ], "headline-md": [ "28px", { "lineHeight": "32px", "fontWeight": "700" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.1em", "fontWeight": "600" } ], "title-lg": [ "18px", { "lineHeight": "24px", "fontWeight": "700" } ], "label-lg": [ "16px", { "lineHeight": "20px", "letterSpacing": "0.06em", "fontWeight": "700" } ], "body-lg": [ "16px", { "lineHeight": "26px", "fontWeight": "400" } ], "title-md": [ "16px", { "lineHeight": "22px", "fontWeight": "600" } ], "body-sm": [ "12px", { "lineHeight": "18px", "fontWeight": "400" } ], "headline-sm": [ "22px", { "lineHeight": "26px", "fontWeight": "600" } ] } } } };</script></head><body class="bg-background text-on-surface font-body-md text-body-md antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 right-0 z-50 bg-carbon-shield/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.35)]"><div class="hidden lg:block w-full bg-surface-container-lowest/80 px-margin"><div class="w-full flex items-center justify-between py-space-xs text-body-sm text-tertiary"><div class="flex items-center gap-space-lg"><span>Mon - Sat: 8:00 AM - 7:00 PM | Sun: 9:00 AM - 4:00 PM</span><span>842 Apex Motorway, Industrial Bay 4</span></div><div class="flex items-center gap-space-md"><span class="text-hydro-electric font-title-md">Call: (555) 932-3382</span><span class="text-outline-variant">|</span><span class="text-speed-red-bright uppercase font-label-sm tracking-wider">Ceramic Pro Certified</span></div></div></div><div class="h-20 w-full px-margin flex items-center justify-between"><a class="flex items-center gap-space-md group" data-path="home" href="#"><div class="relative flex items-center justify-center p-space-xs bg-surface-elevated rounded-xl shadow-[0_0_12px_rgba(0,159,227,0.15)]"><span class="material-symbols-outlined text-primary-container text-2xl">shield</span></div><div class="flex flex-col"><span class="font-headline-md text-headline-md uppercase tracking-tight text-paint-gloss-white leading-none">We 2 Detailing</span><span class="font-label-sm text-label-sm uppercase tracking-widest text-hydro-electric font-bold leading-none mt-1">Car Washing &amp; Studio</span></div></a><nav class="hidden xl:flex items-center gap-space-lg font-label-lg text-label-lg uppercase tracking-wider" data-active-classes="text-speed-red-bright font-bold"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="services-and-packages" href="#">Services &amp; Packages</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="paint-protection-and-ceramic-coating" href="#">Paint Protection &amp; Ceramic</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="gallery-before-and-after" href="#">Gallery</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="about-us" href="#">About Us</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="pricing" href="#">Pricing</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="reviews" href="#">Reviews</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center justify-center bg-primary-container hover:bg-speed-red-bright text-on-primary-container font-label-lg text-label-lg uppercase tracking-wider px-space-lg py-space-sm rounded-lg shadow-[0_4px_16px_rgba(227,30,36,0.35)] transition-all" data-path="book-appointment" href="#">Book Appointment</a><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1WePaUOyhlD7IG7dkS_-XH0qlhZ3UfjLjQFklM-CzP0Z1ObZMeBtGCbkHnyuk07yjS4aSqxaSVWhjvXgpdoZwmvPGxbkkmsx7j-1qcnoLMCYjSggbCXxodYP8CxFLrZdmSGkkHmeCpYh2M52y1JNUe-aKnAghpwBArS7OSQDVOcFdZFON4r5kpO0Xp2L6K8qKXeeAIeVpVhmZ6myW17VW6Cj9KVWvPkIhnb_G12y8E2T0-MqfiYqRScEjFf"/></div></div></header><main class="w-full pt-20 bg-background min-h-screen"><div class="flex flex-col w-full text-on-surface">
+<!-- HERO SECTION -->
+<section class="relative w-full overflow-hidden bg-surface-container-lowest py-space-xl lg:py-24 px-margin">
+<!-- Ambient Radial Lighting mimicking vehicle studio LEDs & Hydro Blue Underglow -->
+<div class="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[720px] h-[480px] bg-secondary-container/15 rounded-full blur-[140px]"></div>
+<div class="pointer-events-none absolute bottom-0 right-0 w-[540px] h-[360px] bg-primary-container/10 rounded-full blur-[120px]"></div>
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-space-xl relative z-10">
+<!-- Left Content Column -->
+<div class="flex-1 flex flex-col items-start gap-space-md text-left">
+<!-- Badge -->
+<div class="inline-flex items-center gap-space-sm px-space-md py-space-xs rounded-full bg-surface-elevated shadow-md">
+<span class="material-symbols-outlined text-speed-red-bright text-lg">verified</span>
+<span class="font-label-md text-label-md uppercase tracking-widest text-hydro-electric">Ceramic Pro Certified Studio &amp; Mobile Lab</span>
+</div>
+<!-- Main Display Headline -->
+<h1 class="font-display text-display uppercase tracking-tight text-paint-gloss-white leading-[0.95]">
+          Unrivaled Precision.<br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-speed-red-bright via-primary-container to-hydro-electric">Showroom</span> Perfection.
+        </h1>
+<!-- Subheading -->
+<p class="font-body-lg text-body-lg text-tertiary max-w-xl leading-relaxed">
+          Elite automotive rejuvenation, multi-stage machine swirl eradication, interior steam extraction, and military-grade 9H ceramic nanotech armor. Built for drivers who demand mechanical brilliance.
+        </p>
+<!-- CTA Cluster -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-sm w-full sm:w-auto">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-sm bg-primary-container hover:bg-speed-red-bright text-paint-gloss-white font-label-lg text-label-lg uppercase tracking-wider px-8 py-4 rounded-lg shadow-[0_8px_24px_rgba(227,30,36,0.35)] transition-all transform hover:-translate-y-0.5" href="#quick-booking">
+<span class="material-symbols-outlined text-xl">calendar_month</span>
+<span>Book Your Detail Now</span>
+</a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-sm bg-surface-elevated hover:bg-surface-bright text-chrome-silver font-label-lg text-label-lg uppercase tracking-wider px-8 py-4 rounded-lg shadow-md transition-all" href="#packages">
+<span>Explore Packages &amp; Pricing</span>
+<span class="material-symbols-outlined text-xl">arrow_downward</span>
+</a>
+</div>
+<!-- Metric Stat Strip -->
+<div class="grid grid-cols-3 gap-space-md pt-space-lg w-full max-w-lg">
+<div class="flex flex-col">
+<span class="font-display text-headline-lg uppercase text-paint-gloss-white tracking-tight">1,500+</span>
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider">Vehicles Perfected</span>
+</div>
+<div class="flex flex-col">
+<span class="font-display text-headline-lg uppercase text-hydro-electric tracking-tight">99.8%</span>
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider">5-Star Verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-display text-headline-lg uppercase text-speed-red-bright tracking-tight">7+ YRS</span>
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider">Master Craftsmanship</span>
+</div>
+</div>
+</div>
+<!-- Right Visual Feature Column: Official Logo Shield Presentation -->
+<div class="w-full lg:w-5/12 flex flex-col items-center justify-center relative">
+<div class="relative w-full max-w-md aspect-square rounded-full p-4 flex items-center justify-center bg-gradient-to-br from-surface-elevated via-carbon-shield to-surface-container-lowest shadow-[0_16px_50px_rgba(0,0,0,0.8)] group">
+<!-- Ambient Rotating Hydro-Pulse Ring -->
+<div class="absolute inset-0 rounded-full bg-gradient-to-tr from-secondary-container/20 to-primary-container/20 blur-xl animate-pulse"></div>
+<!-- Official Shield Logo Image Integration -->
+<div class="relative z-10 w-full h-full flex flex-col items-center justify-center p-6 bg-surface-container-lowest/90 rounded-full backdrop-blur-md shadow-inner">
+<img alt="We 2 Detailing Car Washing Official Badge Logo" class="max-h-72 w-auto object-contain filter drop-shadow-[0_12px_24px_rgba(0,159,227,0.35)] transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr6fVv9_nEAYFIiYtSkAtgKmg_tE3WuQKDrnnH3TQCzvo60GU0WtLhTLqLFumLHHaG4oTPu58-uUCg7wXLYv_h4frtb-z6x0BHn8uhcS_1nH-KJeu2tG2pDLAAQmvKPlUseeJcvqnCIFgi29iIsr5SyOD9-MVl0PRv7D5a7FH_R6wnl2XvJGHjDBf7M-eGpCYAIS0_DisAouWAUYl5fYRhkI-Z_CYX2-TtXd-usBhueigDZhBGOAAxHQ"/>
+<div class="mt-2 inline-flex items-center gap-1.5 px-3 py-1 bg-surface-elevated rounded-full">
+<span class="w-2 h-2 rounded-full bg-speed-red-bright animate-ping"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-paint-gloss-white">Bay 4 Active Operations</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Trust Badges Bar -->
+<div class="max-w-7xl mx-auto mt-space-xl pt-space-lg grid grid-cols-2 md:grid-cols-4 gap-space-md">
+<div class="flex items-center gap-space-sm p-space-md bg-carbon-shield rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-speed-red-bright text-2xl">workspace_premium</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-paint-gloss-white">Ceramic Pro 9H</span>
+<span class="font-body-sm text-body-sm text-tertiary">Certified Warranty Center</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-space-md bg-carbon-shield rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-hydro-electric text-2xl">water_drop</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-paint-gloss-white">0-PPM Water Rinse</span>
+<span class="font-body-sm text-body-sm text-tertiary">Spot-Free Deionized Tech</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-space-md bg-carbon-shield rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-speed-red-bright text-2xl">precision_manufacturing</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-paint-gloss-white">Dual-Action Polishing</span>
+<span class="font-body-sm text-body-sm text-tertiary">Zero Hologram Guarantee</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-space-md bg-carbon-shield rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-hydro-electric text-2xl">shield</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-paint-gloss-white">Fully Insured Studio</span>
+<span class="font-body-sm text-body-sm text-tertiary">$2M Exotics Coverage</span>
+</div>
+</div>
+</div>
+</section>
+<!-- PACKAGES & PRICING GRID -->
+<section class="w-full py-space-xl px-margin bg-background relative" id="packages">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="inline-flex items-center gap-space-xs font-label-md text-label-md uppercase tracking-widest text-speed-red-bright">
+<span class="material-symbols-outlined text-base">directions_car</span>
+<span>Tailored Rejuvenation Tiers</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg uppercase tracking-tight text-paint-gloss-white">
+            Detailing Packages Designed For Perfection
+          </h2>
+</div>
+<p class="font-body-md text-body-md text-tertiary max-w-md">
+          Transparent pricing tiered for standard sedans, mid-size crossovers, and full-size SUVs. Every tier executed with surgical diligence.
+        </p>
+</div>
+<!-- Packages Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg items-stretch pt-space-sm">
+<!-- Package 1: Express Hydro Wash & Wax -->
+<div class="flex flex-col justify-between p-space-lg bg-carbon-shield rounded-xl shadow-lg relative transition-transform duration-300 hover:-translate-y-1">
+<div class="flex flex-col gap-space-md">
+<div class="flex justify-between items-start">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-hydro-electric font-bold">Tier 01 // Maintenance</span>
+<h3 class="font-headline-md text-headline-md uppercase text-paint-gloss-white mt-1">Express Hydro Wash &amp; Wax</h3>
+</div>
+<span class="material-symbols-outlined text-hydro-electric text-2xl">local_car_wash</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-display text-display uppercase text-paint-gloss-white tracking-tight">$79</span>
+<span class="font-body-sm text-body-sm text-tertiary">/ Sedan ($99 SUV)</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary leading-relaxed">
+              Ideal for bi-weekly preservation. Strips road grime, degreases high-heat alloy wheels, and seals with slick hydrophobic gloss.
+            </p>
+<ul class="flex flex-col gap-space-sm pt-space-sm font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-hydro-electric text-lg">check_circle</span>
+<span>Touchless pH-neutral snow foam cannon pre-soak</span>
+</li>
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-hydro-electric text-lg">check_circle</span>
+<span>Two-bucket grit guard scratchless mitt bath</span>
+</li>
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-hydro-electric text-lg">check_circle</span>
+<span>Deep brake dust wheel wash &amp; satin tire dress</span>
+</li>
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-hydro-electric text-lg">check_circle</span>
+<span>Deionized spot-free rinse + heated air blow dry</span>
+</li>
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-hydro-electric text-lg">check_circle</span>
+<span>Spray SiO2 hydro gloss sealant (30-day shield)</span>
+</li>
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-hydro-electric text-lg">check_circle</span>
+<span>Crystal streak-free glass interior/exterior polish</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-lg mt-space-md">
+<a class="w-full inline-flex items-center justify-center gap-space-sm bg-surface-elevated hover:bg-surface-bright text-paint-gloss-white font-label-lg text-label-lg uppercase tracking-wider py-space-md rounded-lg shadow-sm transition-colors" href="#quick-booking">
+<span>Select Express Hydro</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Package 2: Signature Deep Clean (Featured) -->
+<div class="flex flex-col justify-between p-space-lg bg-surface-elevated rounded-xl shadow-[0_12px_36px_rgba(227,30,36,0.2)] relative transition-transform duration-300 hover:-translate-y-1">
+<!-- Featured Badge -->
+<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-speed-red-bright to-primary-container text-paint-gloss-white font-label-md text-label-md uppercase tracking-widest rounded-full shadow-md">
+            Most Popular Choice
+          </div>
+<div class="flex flex-col gap-space-md">
+<div class="flex justify-between items-start mt-2">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-speed-red-bright font-bold">Tier 02 // Deep Revival</span>
+<h3 class="font-headline-md text-headline-md uppercase text-paint-gloss-white mt-1">Signature Deep Clean &amp; Restore</h3>
+</div>
+<span class="material-symbols-outlined text-speed-red-bright text-2xl">auto_fix_high</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-display text-display uppercase text-paint-gloss-white tracking-tight">$189</span>
+<span class="font-body-sm text-body-sm text-tertiary">/ Sedan ($229 SUV)</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary leading-relaxed">
+              Complete stem-to-stern rejuvenation. Full clay bar paint decontamination combined with hot water carpet &amp; upholstery extraction.
+            </p>
+<ul class="flex flex-col gap-space-sm pt-space-sm font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-speed-red-bright text-lg">check_circle</span>
+<span>Everything in Tier 01 Maintenance Wash</span>
+</li>
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-speed-red-bright text-lg">check_circle</span>
+<span>Fine-grade clay bar paint &amp; glass decontamination</span>
+</li>
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-speed-red-bright text-lg">check_circle</span>
+<span>Iron deposit chemical fallout dissolution wash</span>
+</li>
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-speed-red-bright text-lg">check_circle</span>
+<span>Steam sanitization + hot-water carpet extraction</span>
+</li>
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-speed-red-bright text-lg">check_circle</span>
+<span>Full leather deep pore cleanse &amp; matte balm nourish</span>
+</li>
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-speed-red-bright text-lg">check_circle</span>
+<span>3-Month synthetic carnauba polymer sealant</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-lg mt-space-md">
+<a class="w-full inline-flex items-center justify-center gap-space-sm bg-primary-container hover:bg-speed-red-bright text-paint-gloss-white font-label-lg text-label-lg uppercase tracking-wider py-space-md rounded-lg shadow-[0_4px_16px_rgba(227,30,36,0.35)] transition-all" href="#quick-booking">
+<span>Select Signature Clean</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Package 3: Master Ceramic Shield -->
+<div class="flex flex-col justify-between p-space-lg bg-carbon-shield rounded-xl shadow-lg relative transition-transform duration-300 hover:-translate-y-1">
+<div class="flex flex-col gap-space-md">
+<div class="flex justify-between items-start">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-hydro-electric font-bold">Tier 03 // Flagship Defense</span>
+<h3 class="font-headline-md text-headline-md uppercase text-paint-gloss-white mt-1">Master Correction &amp; 5-Yr Ceramic</h3>
+</div>
+<span class="material-symbols-outlined text-hydro-electric text-2xl">shield_locked</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-display text-display uppercase text-paint-gloss-white tracking-tight">$699</span>
+<span class="font-body-sm text-body-sm text-tertiary">/ Sedan ($899 SUV)</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary leading-relaxed">
+              Showroom mirror transformation. Multi-stage optical compound machine polishing eliminating 90%+ swirls, locked under 9H Ceramic Armor.
+            </p>
+<ul class="flex flex-col gap-space-sm pt-space-sm font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-hydro-electric text-lg">check_circle</span>
+<span>Complete Tier 02 Deep Clean &amp; Clay Treatment</span>
+</li>
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-hydro-electric text-lg">check_circle</span>
+<span>2-Stage Rupes DA compound &amp; jeweling polish (90%+ swirl removal)</span>
+</li>
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-hydro-electric text-lg">check_circle</span>
+<span>Ceramic Pro 9H Multi-Layer Nano Shield (5-Year Bond)</span>
+</li>
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-hydro-electric text-lg">check_circle</span>
+<span>High-heat ceramic wheel face &amp; brake caliper sealant</span>
+</li>
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-hydro-electric text-lg">check_circle</span>
+<span>Hydrophobic windshield rain repellent curing</span>
+</li>
+<li class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-hydro-electric text-lg">check_circle</span>
+<span>Official Warranty Certificate &amp; CarFax record entry</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-lg mt-space-md">
+<a class="w-full inline-flex items-center justify-center gap-space-sm bg-surface-elevated hover:bg-surface-bright text-paint-gloss-white font-label-lg text-label-lg uppercase tracking-wider py-space-md rounded-lg shadow-sm transition-colors" href="#quick-booking">
+<span>Select Ceramic Shield</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CERAMIC & PAINT CORRECTION SHOWCASE (BEFORE/AFTER & PROCESS) -->
+<section class="w-full py-space-xl px-margin bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-xl">
+<!-- Split Heading & Tech Specs -->
+<div class="flex flex-col lg:flex-row items-start justify-between gap-space-lg">
+<div class="max-w-xl flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md uppercase tracking-widest text-hydro-electric font-bold">Optical Science &amp; Surface Mastery</span>
+<h2 class="font-headline-lg text-headline-lg uppercase tracking-tight text-paint-gloss-white">
+            Transforming Weathered Clear Coats Into Deep Mirrors
+          </h2>
+<p class="font-body-md text-body-md text-tertiary leading-relaxed mt-2">
+            Automotive clear coats are vulnerable to micro-marring, hard water etching, and wash tunnel swirl patterns. Our laboratory-grade dual-action correction removes microns of damaged clear coat before locking in self-cleaning hydrophobic ceramic barrier layers.
+          </p>
+</div>
+<!-- Metrics pill card -->
+<div class="p-space-lg bg-carbon-shield rounded-xl shadow-lg flex flex-col sm:flex-row gap-space-lg">
+<div class="flex flex-col items-start">
+<span class="font-display text-headline-lg uppercase text-speed-red-bright leading-none">9H+</span>
+<span class="font-label-sm text-label-sm uppercase text-chrome-silver tracking-wider mt-1">Pencil Hardness</span>
+<span class="font-body-sm text-body-sm text-tertiary">Resists micro-abrasions</span>
+</div>
+<div class="w-px h-12 bg-surface-border hidden sm:block"></div>
+<div class="flex flex-col items-start">
+<span class="font-display text-headline-lg uppercase text-hydro-electric leading-none">110°</span>
+<span class="font-label-sm text-label-sm uppercase text-chrome-silver tracking-wider mt-1">Contact Angle</span>
+<span class="font-body-sm text-body-sm text-tertiary">Superhydrophobic sheeting</span>
+</div>
+<div class="w-px h-12 bg-surface-border hidden sm:block"></div>
+<div class="flex flex-col items-start">
+<span class="font-display text-headline-lg uppercase text-paint-gloss-white leading-none">1000°F</span>
+<span class="font-label-sm text-label-sm uppercase text-chrome-silver tracking-wider mt-1">Thermal Shield</span>
+<span class="font-body-sm text-body-sm text-tertiary">Exhaust &amp; caliper rated</span>
+</div>
+</div>
+</div>
+<!-- Before / After Visual Comparison Mosaic -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Before Panel -->
+<div class="flex flex-col bg-carbon-shield rounded-xl overflow-hidden shadow-lg">
+<div class="relative h-72 sm:h-80 w-full overflow-hidden">
+<img class="w-full h-full object-cover filter contrast-125 brightness-90" data-alt="Close up high-contrast macro view of a glossy black sports car hood heavily marred with spider-web swirl marks, scratch holograms, and oxidation under intense fluorescent inspection lights in a dark garage." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBl0mnh8YaeBY7SJcsX2aBhXkijQr-JK37syDe_BUzBg78_327soxlQAVeRP6l4DXDAkPtc-xMEfb9AF3-wmAH77Nbgf_F7B2E7tlY4RBNxm126pD43ykofC8K8ePL1JRzv2ped0ELSyitL2IARkzAuVTbl4JIEB_J9MXhaLcz5PfTW6JCY1bK9KEVxZnqqNefUyVVKvqYQi-DSPDdw79-NUFdmI45Uq8N5Yu7z9d0O"/>
+<div class="absolute top-4 left-4 bg-surface-container-lowest/80 backdrop-blur-md px-3 py-1 rounded">
+<span class="font-label-md text-label-md uppercase tracking-wider text-speed-red-bright font-bold">BEFORE // Swirled &amp; Oxidized Clearcoat</span>
+</div>
+<div class="absolute bottom-4 left-4 right-4 bg-surface-container-lowest/90 backdrop-blur-md p-space-sm rounded text-body-sm text-tertiary">
+              Micro-scratches from automatic touch car washes create dull light scattering and haze.
+            </div>
+</div>
+<div class="p-space-md flex items-center justify-between text-body-sm">
+<span class="text-tertiary">Defect Level: <strong class="text-speed-red-bright">Severe Swirls &amp; Acid Etching</strong></span>
+<span class="font-label-sm text-label-sm uppercase text-tertiary">Inspection: 45 GU Gloss</span>
+</div>
+</div>
+<!-- After Panel -->
+<div class="flex flex-col bg-carbon-shield rounded-xl overflow-hidden shadow-lg">
+<div class="relative h-72 sm:h-80 w-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Extreme close up macro shot of the exact same deep black automotive paint after multi-stage machine compounding and 9H ceramic coating curing, showcasing flawless liquid mirror gloss, zero swirl marks, and perfectly focused crystal clear reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6iR_mrTipQY3HQfCZddVOySHwz2Ts9WNr2v79N1wYGtikd7IsnQAW21uJ9qsjtEmVHV2af2fePeHbAQYqcB5dvv--0YfSM-J_dByp3wqr-j2eCC6Uf-X6GV1E9BnhrebsPF4O4S0iGYKVISHMtKrGCZucCPDABXRBAlZz4gZmdtFc-KFiLKDpSVStkAiejclGrHnkk-ADdl7ATfHam-EeZSTVg5SM9HUYnoCwaaYg"/>
+<div class="absolute top-4 left-4 bg-surface-container-lowest/80 backdrop-blur-md px-3 py-1 rounded">
+<span class="font-label-md text-label-md uppercase tracking-wider text-hydro-electric font-bold">AFTER // Precision Corrected &amp; Ceramic Cured</span>
+</div>
+<div class="absolute bottom-4 left-4 right-4 bg-surface-container-lowest/90 backdrop-blur-md p-space-sm rounded text-body-sm text-tertiary">
+              99% defect elimination with genuine optical clarity and high-surface-tension hydrophobic beading.
+            </div>
+</div>
+<div class="p-space-md flex items-center justify-between text-body-sm">
+<span class="text-tertiary">Finish: <strong class="text-hydro-electric">True Mirror Reflection &amp; 9H Armor</strong></span>
+<span class="font-label-sm text-label-sm uppercase text-hydro-electric">Inspection: 98 GU Gloss</span>
+</div>
+</div>
+</div>
+<!-- 3-Step Precision Detailing Process Flow -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg pt-space-md">
+<div class="flex flex-col gap-space-sm p-space-lg bg-surface-elevated rounded-xl shadow-md relative overflow-hidden">
+<div class="text-hydro-electric font-display text-headline-lg uppercase opacity-30 absolute top-4 right-6 pointer-events-none">01</div>
+<span class="material-symbols-outlined text-hydro-electric text-3xl">sanitizer</span>
+<h4 class="font-headline-sm text-headline-sm uppercase text-paint-gloss-white">Chemical &amp; Mechanical Decon</h4>
+<p class="font-body-sm text-body-sm text-tertiary leading-relaxed">
+            Ferrous metal fallout removal dissolved with pH-balanced reactive formula, followed by ultra-fine synthetic clay lubricant gliding to lift embedded industrial particulate.
+          </p>
+</div>
+<div class="flex flex-col gap-space-sm p-space-lg bg-surface-elevated rounded-xl shadow-md relative overflow-hidden">
+<div class="text-speed-red-bright font-display text-headline-lg uppercase opacity-30 absolute top-4 right-6 pointer-events-none">02</div>
+<span class="material-symbols-outlined text-speed-red-bright text-3xl">build_circle</span>
+<h4 class="font-headline-sm text-headline-sm uppercase text-paint-gloss-white">Dual-Action Machine Correction</h4>
+<p class="font-body-sm text-body-sm text-tertiary leading-relaxed">
+            Multi-stage micro-abrasive polishing using random orbital Rupes equipment. Levels out microscopic ridges, eradicating holograms, buffer trails, and spider webbing.
+          </p>
+</div>
+<div class="flex flex-col gap-space-sm p-space-lg bg-surface-elevated rounded-xl shadow-md relative overflow-hidden">
+<div class="text-hydro-electric font-display text-headline-lg uppercase opacity-30 absolute top-4 right-6 pointer-events-none">03</div>
+<span class="material-symbols-outlined text-hydro-electric text-3xl">verified_user</span>
+<h4 class="font-headline-sm text-headline-sm uppercase text-paint-gloss-white">Ceramic Pro 9H Nanotech Curing</h4>
+<p class="font-body-sm text-body-sm text-tertiary leading-relaxed">
+            Cross-linking liquid silica (SiO2) hand-applied in climate-controlled bays. Cures into a permanent glass shield that repels bird droppings, road salt, and UV fading.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- INTERACTIVE APPOINTMENT & PRICE CALCULATOR WIDGET -->
+<section class="w-full py-space-xl px-margin bg-background relative" id="quick-booking">
+<div class="max-w-6xl mx-auto flex flex-col gap-space-lg">
+<div class="text-center flex flex-col items-center gap-space-xs">
+<span class="font-label-md text-label-md uppercase tracking-widest text-speed-red-bright font-bold">Fast Lane Reservation</span>
+<h2 class="font-headline-lg text-headline-lg uppercase tracking-tight text-paint-gloss-white">
+          Configure Your Detail &amp; Book Studio Bay
+        </h2>
+<p class="font-body-md text-body-md text-tertiary max-w-xl">
+          Select vehicle chassis, your chosen tier, and optional bespoke add-ons. Instant pricing calculation and zero credit card required to hold your slot.
+        </p>
+</div>
+<!-- Booking Card Container -->
+<div class="bg-carbon-shield rounded-2xl shadow-2xl p-space-lg md:p-space-xl flex flex-col gap-space-lg">
+<!-- STEP 1: VEHICLE TYPE SELECTOR -->
+<div class="flex flex-col gap-space-sm">
+<label class="font-label-lg text-label-lg uppercase tracking-wider text-chrome-silver flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-speed-red-bright text-paint-gloss-white text-xs flex items-center justify-center font-bold">1</span>
+            Select Vehicle Class
+          </label>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md" id="vehicle-type-selector">
+<button class="vehicle-btn active flex flex-col items-center justify-center gap-2 p-space-md rounded-xl bg-surface-elevated text-paint-gloss-white shadow-md transition-all text-center" data-multiplier="1.0" type="button">
+<span class="material-symbols-outlined text-3xl text-speed-red-bright">directions_car</span>
+<span class="font-label-md text-label-md uppercase tracking-wider">Coupe / Sedan</span>
+<span class="text-body-sm text-tertiary">Standard size</span>
+</button>
+<button class="vehicle-btn flex flex-col items-center justify-center gap-2 p-space-md rounded-xl bg-surface-container text-tertiary hover:text-paint-gloss-white shadow-sm transition-all text-center" data-multiplier="1.2" type="button">
+<span class="material-symbols-outlined text-3xl">airport_shuttle</span>
+<span class="font-label-md text-label-md uppercase tracking-wider">Mid SUV / Crossover</span>
+<span class="text-body-sm text-tertiary">+20% surface</span>
+</button>
+<button class="vehicle-btn flex flex-col items-center justify-center gap-2 p-space-md rounded-xl bg-surface-container text-tertiary hover:text-paint-gloss-white shadow-sm transition-all text-center" data-multiplier="1.35" type="button">
+<span class="material-symbols-outlined text-3xl">rv_hookup</span>
+<span class="font-label-md text-label-md uppercase tracking-wider">Full Truck / Large SUV</span>
+<span class="text-body-sm text-tertiary">+35% surface</span>
+</button>
+<button class="vehicle-btn flex flex-col items-center justify-center gap-2 p-space-md rounded-xl bg-surface-container text-tertiary hover:text-paint-gloss-white shadow-sm transition-all text-center" data-multiplier="1.25" type="button">
+<span class="material-symbols-outlined text-3xl">sports_score</span>
+<span class="font-label-md text-label-md uppercase tracking-wider">Exotic / Supercar</span>
+<span class="text-body-sm text-tertiary">Specialized handling</span>
+</button>
+</div>
+</div>
+<!-- STEP 2: SELECT PACKAGE -->
+<div class="flex flex-col gap-space-sm pt-space-sm">
+<label class="font-label-lg text-label-lg uppercase tracking-wider text-chrome-silver flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-speed-red-bright text-paint-gloss-white text-xs flex items-center justify-center font-bold">2</span>
+            Choose Core Service Tier
+          </label>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md" id="package-selector">
+<div class="package-option cursor-pointer p-space-md rounded-xl bg-surface-container flex flex-col justify-between transition-all" data-base-price="79" data-name="Express Hydro Wash">
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md uppercase tracking-wider text-paint-gloss-white font-bold">Express Hydro</span>
+<span class="font-title-md text-title-md text-hydro-electric font-bold">$79</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary mt-2">Foam wash, deionized rinse, wheel detox, spray sealant.</p>
+</div>
+<div class="package-option selected cursor-pointer p-space-md rounded-xl bg-surface-elevated text-paint-gloss-white shadow-md flex flex-col justify-between transition-all" data-base-price="189" data-name="Signature Deep Clean">
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md uppercase tracking-wider text-speed-red-bright font-bold">Signature Clean (Pop)</span>
+<span class="font-title-md text-title-md text-speed-red-bright font-bold">$189</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary mt-2">Clay bar decontamination, interior steam &amp; carpet extraction, synthetic seal.</p>
+</div>
+<div class="package-option cursor-pointer p-space-md rounded-xl bg-surface-container flex flex-col justify-between transition-all" data-base-price="699" data-name="5-Yr Ceramic Armor">
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md uppercase tracking-wider text-paint-gloss-white font-bold">5-Yr Ceramic Armor</span>
+<span class="font-title-md text-title-md text-hydro-electric font-bold">$699</span>
+</div>
+<p class="font-body-sm text-body-sm text-tertiary mt-2">2-stage machine compounding swirl removal + 9H Ceramic Pro certified.</p>
+</div>
+</div>
+</div>
+<!-- STEP 3: SPECIALIZED ADD-ONS -->
+<div class="flex flex-col gap-space-sm pt-space-sm">
+<label class="font-label-lg text-label-lg uppercase tracking-wider text-chrome-silver flex items-center gap-2">
+<span class="w-6 h-6 rounded-full bg-speed-red-bright text-paint-gloss-white text-xs flex items-center justify-center font-bold">3</span>
+            Optional High-Impact Add-ons
+          </label>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+<label class="flex items-center gap-space-sm p-space-md rounded-xl bg-surface-container cursor-pointer transition-colors hover:bg-surface-elevated">
+<input class="addon-checkbox w-5 h-5 rounded bg-surface-elevated accent-primary-container" data-addon-price="55" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-paint-gloss-white">Engine Bay Detail</span>
+<span class="font-body-sm text-body-sm text-tertiary">Steam degrease + plastic dress (+$55)</span>
+</div>
+</label>
+<label class="flex items-center gap-space-sm p-space-md rounded-xl bg-surface-container cursor-pointer transition-colors hover:bg-surface-elevated">
+<input class="addon-checkbox w-5 h-5 rounded bg-surface-elevated accent-primary-container" data-addon-price="75" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-paint-gloss-white">Headlight Restoration</span>
+<span class="font-body-sm text-body-sm text-tertiary">Wet sand &amp; UV clear ceramic (+$75)</span>
+</div>
+</label>
+<label class="flex items-center gap-space-sm p-space-md rounded-xl bg-surface-container cursor-pointer transition-colors hover:bg-surface-elevated">
+<input class="addon-checkbox w-5 h-5 rounded bg-surface-elevated accent-primary-container" data-addon-price="45" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-paint-gloss-white">Heavy Pet Hair Removal</span>
+<span class="font-body-sm text-body-sm text-tertiary">Specialized static pumice clean (+$45)</span>
+</div>
+</label>
+</div>
+</div>
+<!-- STEP 4: CONTACT & TIME SCHEDULING + SUMMARY STRIP -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg pt-space-sm">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md uppercase tracking-wider text-chrome-silver">Full Name</label>
+<input class="w-full p-space-md bg-surface-elevated rounded-lg text-paint-gloss-white placeholder-tertiary outline-none focus:bg-surface-container-high transition-colors" placeholder="e.g. Marcus Vance" type="text"/>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md uppercase tracking-wider text-chrome-silver">Phone / Text Updates</label>
+<input class="w-full p-space-md bg-surface-elevated rounded-lg text-paint-gloss-white placeholder-tertiary outline-none focus:bg-surface-container-high transition-colors" placeholder="(555) 000-0000" type="tel"/>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md uppercase tracking-wider text-chrome-silver">Service Preference</label>
+<select class="w-full p-space-md bg-surface-elevated rounded-lg text-paint-gloss-white outline-none focus:bg-surface-container-high transition-colors">
+<option>Studio Bay 4 Drop-off (Apex Motorway)</option>
+<option>Mobile Van Dispatch to Residence</option>
+<option>Mobile Van Dispatch to Office</option>
+</select>
+</div>
+</div>
+<!-- Summary & Reserve Button -->
+<div class="mt-space-md p-space-lg bg-surface-container-lowest rounded-xl flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex flex-col items-center sm:items-start text-center sm:text-left">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-hydro-electric font-bold">Calculated Estimated Total</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-display text-display uppercase text-paint-gloss-white tracking-tight" id="calculated-total-display">$189</span>
+<span class="font-body-sm text-body-sm text-tertiary">All labor &amp; materials included</span>
+</div>
+<span class="font-body-sm text-body-sm text-chrome-silver" id="selected-summary-desc">Coupe/Sedan • Signature Deep Clean</span>
+</div>
+<button class="w-full sm:w-auto inline-flex items-center justify-center gap-space-sm bg-primary-container hover:bg-speed-red-bright text-paint-gloss-white font-label-lg text-label-lg uppercase tracking-wider px-10 py-5 rounded-lg shadow-[0_8px_24px_rgba(227,30,36,0.4)] transition-all transform hover:-translate-y-0.5" id="reserve-btn" type="button">
+<span class="material-symbols-outlined text-xl">event_available</span>
+<span>Confirm Reservation</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- CUSTOMER REVIEWS & REPUTATION -->
+<section class="w-full py-space-xl px-margin bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="inline-flex items-center gap-space-xs font-label-md text-label-md uppercase tracking-widest text-hydro-electric">
+<span class="material-symbols-outlined text-base">reviews</span>
+<span>Unfiltered Client Feedback</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg uppercase tracking-tight text-paint-gloss-white">
+            Trusted By Enthusiasts &amp; Daily Commuters
+          </h2>
+</div>
+<div class="flex items-center gap-space-sm p-space-sm px-space-md bg-carbon-shield rounded-lg shadow-sm">
+<div class="flex text-speed-red-bright">
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+<span class="material-symbols-outlined text-base">star</span>
+</div>
+<span class="font-title-md text-title-md text-paint-gloss-white">4.98 / 5.0 Rating</span>
+<span class="font-body-sm text-body-sm text-tertiary">(280+ Reviews)</span>
+</div>
+</div>
+<!-- Testimonials 3-Card Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg pt-space-sm">
+<!-- Review 1 -->
+<div class="p-space-lg bg-carbon-shield rounded-xl shadow-md flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="flex justify-between items-center">
+<div class="flex text-speed-red-bright">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary uppercase">2 Days Ago</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed italic">
+              "Brought my Porsche 911 GT3 in after a track weekend with rubber deposits and micro-marring. We 2 Detailing performed a 2-stage polish and 5-year Ceramic coat. The obsidian black looks like wet glass. Literally cleaner than delivery day."
+            </p>
+</div>
+<div class="flex items-center gap-space-sm pt-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-elevated flex items-center justify-center font-bold text-hydro-electric">
+              DK
+            </div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-paint-gloss-white">David K.</span>
+<span class="font-body-sm text-body-sm text-tertiary">Porsche 911 GT3 Touring • Studio Bay</span>
+</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="p-space-lg bg-carbon-shield rounded-xl shadow-md flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="flex justify-between items-center">
+<div class="flex text-speed-red-bright">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary uppercase">1 Week Ago</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed italic">
+              "Two dogs and three kids wrecked the interior of our Yukon Denali. They extracted red juice stains and eliminated all pet odor completely. Leather feels soft and matte without that nasty greasy sheen cheap shops leave."
+            </p>
+</div>
+<div class="flex items-center gap-space-sm pt-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-elevated flex items-center justify-center font-bold text-speed-red-bright">
+              SL
+            </div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-paint-gloss-white">Sarah L.</span>
+<span class="font-body-sm text-body-sm text-tertiary">GMC Yukon Denali • Mobile Van Service</span>
+</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="p-space-lg bg-carbon-shield rounded-xl shadow-md flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-sm">
+<div class="flex justify-between items-center">
+<div class="flex text-speed-red-bright">
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+<span class="material-symbols-outlined text-sm">star</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary uppercase">3 Weeks Ago</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed italic">
+              "The water beading after the Hydro Wash is insane. Drove through heavy thunderstorm rain on Highway 10 and the water literally rolled off the hood effortlessly. Best detailing crew in the metro area without question."
+            </p>
+</div>
+<div class="flex items-center gap-space-sm pt-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-elevated flex items-center justify-center font-bold text-hydro-electric">
+              AR
+            </div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-paint-gloss-white">Aaron R.</span>
+<span class="font-body-sm text-body-sm text-tertiary">BMW M4 Competition • Express Hydro Tier</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SERVICE AREA & STUDIO DISPATCH ZONE -->
+<section class="w-full py-space-xl px-margin bg-background">
+<div class="max-w-7xl mx-auto rounded-2xl bg-carbon-shield overflow-hidden shadow-2xl flex flex-col lg:flex-row">
+<!-- Left Info Box -->
+<div class="p-space-lg lg:p-space-xl flex-1 flex flex-col justify-between gap-space-lg">
+<div class="flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-space-xs font-label-md text-label-md uppercase tracking-widest text-speed-red-bright font-bold">
+<span class="material-symbols-outlined text-lg">pin_drop</span>
+<span>Facility &amp; Mobile Coverage</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg uppercase text-paint-gloss-white tracking-tight">
+            Studio Headquarters &amp; Fully Equipped Mobile Fleet
+          </h3>
+<p class="font-body-md text-body-md text-tertiary leading-relaxed">
+            Drop off your vehicle at our climate-controlled 4-bay detailing studio on Apex Motorway, or have our customized mobile rig come directly to your driveway or corporate garage. Complete with onboard 100-gallon deionized water tank and ultra-quiet inverter generators.
+          </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md pt-space-xs">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-hydro-electric text-xl mt-1">navigation</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-paint-gloss-white">Bay 4 Studio</span>
+<span class="font-body-sm text-body-sm text-tertiary">842 Apex Motorway, Ind. Bay 4</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-speed-red-bright text-xl mt-1">local_shipping</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-paint-gloss-white">Mobile Radius</span>
+<span class="font-body-sm text-body-sm text-tertiary">Up to 35 Miles Metro Hub</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-chrome-silver text-xl mt-1">schedule</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-paint-gloss-white">Operational Hours</span>
+<span class="font-body-sm text-body-sm text-tertiary">Mon-Sat: 8AM-7PM | Sun: 9AM-4PM</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-speed-red-bright text-xl mt-1">phone_in_talk</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-paint-gloss-white">Emergency VIP Line</span>
+<span class="font-body-sm text-body-sm text-tertiary">(555) 932-3382 / 932-WASH</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-space-md flex flex-wrap gap-space-md items-center">
+<a class="inline-flex items-center justify-center gap-space-sm bg-primary-container hover:bg-speed-red-bright text-paint-gloss-white font-label-lg text-label-lg uppercase tracking-wider px-8 py-3.5 rounded-lg shadow-md transition-all" href="#quick-booking">
+<span>Schedule Bay Inspection</span>
+</a>
+<span class="font-body-sm text-body-sm text-tertiary">Same-day slots subject to bay availability</span>
+</div>
+</div>
+<!-- Right Location Map Integration -->
+<div class="w-full lg:w-5/12 min-h-[320px] lg:min-h-full relative bg-surface-container-high">
+<div class="w-full h-full min-h-[320px] bg-cover bg-center rounded-none relative" data-location="842 Apex Motorway, Industrial Bay 4" style="">
+<!-- Translucent Studio Badge Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-carbon-shield via-transparent to-transparent lg:hidden pointer-events-none"></div>
+<div class="absolute bottom-6 left-6 right-6 p-space-md bg-carbon-shield/90 backdrop-blur-md rounded-xl shadow-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-3 h-3 rounded-full bg-speed-red-bright animate-ping"></div>
+<span class="font-label-md text-label-md uppercase tracking-wider text-paint-gloss-white font-bold">Studio Active</span>
+</div>
+<span class="font-body-sm text-body-sm text-hydro-electric">Bay Cam Live • 2 Slots Open</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Logic for Booking Widget -->
+<script>
+    (function initDetailingCalculator() {
+      const vehicleButtons = document.querySelectorAll('.vehicle-btn');
+      const packageOptions = document.querySelectorAll('.package-option');
+      const addonCheckboxes = document.querySelectorAll('.addon-checkbox');
+      const totalDisplay = document.getElementById('calculated-total-display');
+      const summaryDesc = document.getElementById('selected-summary-desc');
+      const reserveBtn = document.getElementById('reserve-btn');
+
+      let currentMultiplier = 1.0;
+      let currentVehicleName = 'Coupe / Sedan';
+      let currentBasePrice = 189;
+      let currentPackageName = 'Signature Deep Clean';
+
+      function updateTotal() {
+        let addonsTotal = 0;
+        addonCheckboxes.forEach(cb => {
+          if (cb.checked) {
+            addonsTotal += parseFloat(cb.getAttribute('data-addon-price') || 0);
+          }
+        });
+
+        const calculated = Math.round((currentBasePrice * currentMultiplier) + addonsTotal);
+        if (totalDisplay) {
+          totalDisplay.textContent = '$' + calculated;
+        }
+        if (summaryDesc) {
+          summaryDesc.textContent = `${currentVehicleName} • ${currentPackageName} ${addonsTotal > 0 ? '+ Add-ons' : ''}`;
+        }
+      }
+
+      vehicleButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          vehicleButtons.forEach(b => {
+            b.classList.remove('active', 'bg-surface-elevated', 'text-paint-gloss-white');
+            b.classList.add('bg-surface-container', 'text-tertiary');
+          });
+          btn.classList.add('active', 'bg-surface-elevated', 'text-paint-gloss-white');
+          btn.classList.remove('bg-surface-container', 'text-tertiary');
+          
+          currentMultiplier = parseFloat(btn.getAttribute('data-multiplier') || '1.0');
+          const nameSpan = btn.querySelector('.font-label-md');
+          if (nameSpan) currentVehicleName = nameSpan.textContent.trim();
+          updateTotal();
+        });
+      });
+
+      packageOptions.forEach(opt => {
+        opt.addEventListener('click', () => {
+          packageOptions.forEach(o => {
+            o.classList.remove('selected', 'bg-surface-elevated');
+            o.classList.add('bg-surface-container');
+          });
+          opt.classList.add('selected', 'bg-surface-elevated');
+          opt.classList.remove('bg-surface-container');
+
+          currentBasePrice = parseFloat(opt.getAttribute('data-base-price') || '189');
+          currentPackageName = opt.getAttribute('data-name') || 'Detail Package';
+          updateTotal();
+        });
+      });
+
+      addonCheckboxes.forEach(cb => {
+        cb.addEventListener('change', updateTotal);
+      });
+
+      if (reserveBtn) {
+        reserveBtn.addEventListener('click', () => {
+          const originalText = reserveBtn.innerHTML;
+          reserveBtn.innerHTML = '<span class="material-symbols-outlined animate-spin text-xl">progress_activity</span><span>Securing Bay Slot...</span>';
+          setTimeout(() => {
+            reserveBtn.innerHTML = '<span class="material-symbols-outlined text-xl text-green-400">check_circle</span><span>Bay Reserved! We will text you.</span>';
+            reserveBtn.classList.remove('bg-primary-container', 'hover:bg-speed-red-bright');
+            reserveBtn.classList.add('bg-surface-elevated');
+          }, 900);
+        });
+      }
+
+      updateTotal();
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest text-on-surface pt-space-xl pb-space-lg"><div class="w-full px-margin grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl pb-space-xl"><div class="flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary-container text-2xl">shield</span><span class="font-headline-md text-headline-md uppercase text-paint-gloss-white">We 2 Detailing</span></div><p class="text-body-sm text-tertiary leading-relaxed">Elite automotive rejuvenation and master surface preservation. Precision multi-stage paint correction, hydrophobic coatings, and bespoke interior restoration for performance vehicles.</p><div class="p-space-md bg-surface-elevated rounded-lg shadow-[0_0_12px_rgba(0,159,227,0.1)] flex items-center gap-space-sm"><span class="material-symbols-outlined text-hydro-electric text-xl">verified_user</span><div class="flex flex-col"><span class="font-label-md text-label-md uppercase text-paint-gloss-white">100% Satisfaction Guarantee</span><span class="text-body-sm text-tertiary">Showroom Finish or Free Touch-Up</span></div></div></div><div class="flex flex-col gap-space-md"><span class="font-headline-sm text-headline-sm uppercase text-paint-gloss-white">Quick Navigation</span><nav class="flex flex-col gap-space-sm font-body-md text-body-md" data-active-classes="text-speed-red-bright"><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="services-and-packages" href="#">Stage 1-3 Detailing Packages</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="paint-protection-and-ceramic-coating" href="#">Ceramic Pro 9H Coating</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="gallery-before-and-after" href="#">Before &amp; After Studio</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="pricing" href="#">Transparent Tier Pricing</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="reviews" href="#">Client Testimonials</a><a class="text-on-surface-variant hover:text-on-surface transition-colors" data-path="about-us" href="#">Our Facility &amp; Team</a></nav></div><div class="flex flex-col gap-space-md"><span class="font-headline-sm text-headline-sm uppercase text-paint-gloss-white">Shop Hours</span><div class="flex flex-col gap-space-xs text-body-sm text-tertiary"><div class="flex justify-between py-space-xs"><span class="text-chrome-silver font-semibold">Monday - Friday</span><span>8:00 AM - 7:00 PM</span></div><div class="flex justify-between py-space-xs"><span class="text-chrome-silver font-semibold">Saturday</span><span>8:00 AM - 6:00 PM</span></div><div class="flex justify-between py-space-xs"><span class="text-chrome-silver font-semibold">Sunday</span><span>9:00 AM - 4:00 PM</span></div></div><div class="mt-space-sm flex flex-col gap-space-xs text-body-sm"><span class="text-hydro-electric font-title-md">Walk-In Wash &amp; Detail Bays Open</span><span class="text-tertiary">Express wash slots available daily</span></div></div><div class="flex flex-col gap-space-md"><span class="font-headline-sm text-headline-sm uppercase text-paint-gloss-white">Studio Location</span><div class="flex flex-col gap-space-sm text-body-sm text-tertiary"><div class="flex items-start gap-space-sm"><span class="material-symbols-outlined text-primary-container text-lg mt-0.5">location_on</span><span>842 Apex Motorway, Industrial Bay 4, Metro Auto Hub</span></div><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-hydro-electric text-lg">call</span><span>(555) 932-3382 / (555) 932-WASH</span></div><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-chrome-silver text-lg">mail</span><span>concierge@we2detailing.com</span></div></div><div class="pt-space-sm flex items-center gap-space-sm"><span class="font-label-sm text-label-sm uppercase text-tertiary mr-space-xs">Connect:</span><span class="material-symbols-outlined text-on-surface-variant hover:text-hydro-electric cursor-pointer text-lg p-space-xs bg-surface-elevated rounded">share</span><span class="material-symbols-outlined text-on-surface-variant hover:text-speed-red-bright cursor-pointer text-lg p-space-xs bg-surface-elevated rounded">photo_camera</span><span class="material-symbols-outlined text-on-surface-variant hover:text-hydro-electric cursor-pointer text-lg p-space-xs bg-surface-elevated rounded">smart_display</span></div></div></div><div class="w-full px-margin pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md text-body-sm text-tertiary"><p>© 2025 We 2 Detailing Car Washing Inc. All rights reserved.</p><div class="flex items-center gap-space-lg font-body-sm"><a class="text-tertiary hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="text-tertiary hover:text-on-surface transition-colors" data-path="terms-of-service" href="#">Terms of Service</a><a class="text-tertiary hover:text-on-surface transition-colors" data-path="warranty" href="#">Ceramic Warranty Terms</a></div></div></footer></body></html>
